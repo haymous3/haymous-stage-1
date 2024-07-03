@@ -56,8 +56,8 @@ const currentTimeUTC = `${new Date().getUTCHours()} : ${new Date().getUTCMinutes
 
 const html = `
 <div class="flex date_and_time">
-  <h4 data-testid=${currentDay}>Today is ${dayName}</h4>
-  <h3 data-testid=${currentTimeUTC}>${time}</h3>
+  <h3 data-testid='currentDay' data-testid=${currentDay}>Today is ${currentDay}</h3>
+  <h3 data-testid='currentTimeUTC' data-testid=${currentTimeUTC}>${currentTimeUTC}</h3>
 </div>
 `;
 

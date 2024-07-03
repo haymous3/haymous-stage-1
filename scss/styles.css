@@ -752,11 +752,6 @@
     display: block;
   }
 
-  .date_and_time {
-    display: none;
-    text-align: center;
-  }
-
   .header_and_hero_section_header_navigation_number {
     display: none;
   }
