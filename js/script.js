@@ -1,7 +1,9 @@
 const NavBar = document.querySelector("#bars");
 const NavLinks = document.querySelector("#navLinks");
 const text = document.querySelector("#text");
-const displayDate = document.querySelector(".header_and_hero_section_header");
+const displayDate = document.querySelector(
+  ".header_and_hero_section_hero_text"
+);
 const dateAndTime = document.querySelector(
   ".header_and_hero_section_header_navigation_number"
 );
@@ -48,20 +50,15 @@ const daysOfWeek = [
 ];
 
 // Get the name of the day
-const dayName = daysOfWeek[dayOfWeek].toUpperCase();
+const currentDay = daysOfWeek[dayOfWeek].toUpperCase();
 
-const time = `${new Date().getUTCHours()} : ${new Date().getUTCMinutes()} : ${new Date().getUTCSeconds()}`;
+const currentTimeUTC = `${new Date().getUTCHours()} : ${new Date().getUTCMinutes()} : ${new Date().getUTCSeconds()}`;
 
 const html = `
 <div class="flex date_and_time">
-<h4 data-testid="currentDay">Today is ${dayName}</h4>
-<h3 data-testid="currentTimeUTC">${time}</h3>
-
+  <h4 data-testid=${currentDay}>Today is ${dayName}</h4>
+  <h3 data-testid=${currentTimeUTC}>${time}</h3>
 </div>
 `;
 
 displayDate.insertAdjacentHTML("afterbegin", html);
-
-console.log(time);
-
-// NavLinks.insertAdjacentHTML("beforeend", <h2>${time}</h2>); //
